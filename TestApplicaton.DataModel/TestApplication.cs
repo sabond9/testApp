@@ -2,6 +2,7 @@ using System;
 using System.Data.Entity;
 using System.Data.Entity.Spatial;
 using System.Linq;
+using TestApplicaton.DataModel.ModelConfigurations;
 using TestApplicaton.DataModel.Models;
 
 namespace TestApplicaton.DataModel
@@ -26,6 +27,15 @@ namespace TestApplicaton.DataModel
         
         public DbSet<UserPassword> UserPasswords { get; set; }
 
-        public DbSet<UserRole> UserRoles { get; set; } 
+        public DbSet<UserRole> UserRoles { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new PermissionConfiguration());
+            modelBuilder.Configurations.Add(new PermissionTypeConfiguration());
+            modelBuilder.Configurations.Add(new RoleConfiguration());
+            modelBuilder.Configurations.Add(new UserConfiguration());
+            modelBuilder.Configurations.Add(new UserPasswordConfiguration());
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TestApplicaton.DataModel.Models
 {
@@ -15,6 +16,7 @@ namespace TestApplicaton.DataModel.Models
 
         public int PermissionTypeId { get; set; }
 
+        [ForeignKey("FK_Permission_PermissionType")]
         public PermissionType PermissionType { get; set; }
 
         public ICollection<PermissionRole> PermissionRoles { get; set; }

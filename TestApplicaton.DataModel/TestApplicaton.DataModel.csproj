@@ -51,6 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelConfigurations\PermissionConfiguration.cs" />
+    <Compile Include="ModelConfigurations\PermissionTypeConfiguration.cs" />
+    <Compile Include="ModelConfigurations\RoleConfiguration.cs" />
+    <Compile Include="ModelConfigurations\UserConfiguration.cs" />
+    <Compile Include="ModelConfigurations\UserPasswordConfiguration.cs" />
     <Compile Include="Models\Permission.cs" />
     <Compile Include="Models\PermissionRole.cs" />
     <Compile Include="Models\PermissionType.cs" />
@@ -65,6 +70,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
