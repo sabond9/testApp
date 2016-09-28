@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TestApplicaton.DataModel;
+using TestApplicaton.DataModel.Models;
 
 namespace TestApplication.Controllers
 {
